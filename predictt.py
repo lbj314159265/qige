@@ -68,11 +68,11 @@ elif page == "预测分类页面":
             sex_female]
 
         # 使用pickle的load方法从磁盘文件反序列化加载一个之前保存的随机森林模型对象
-        with open("D:\\streamlit_env\\Chapter8_resources\\rfc_model.pkl", 'rb') as f:
+        with open('rfc_model.pkl', 'rb') as f:
             rfc_model = pickle.load(f)
 
         # 使用pickle的load方法从磁盘文件反序列化加载一个之前保存的映射对象
-        with open('D:\\streamlit_env\\Chapter8_resources\\output_uniques.pkl', 'rb') as f:
+        with open('output_uniques.pkl', 'rb') as f:
             output_uniques_map = pickle.load(f) # 保存随机森林模型
 
   # 保存标签映射关系
