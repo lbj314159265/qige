@@ -10,7 +10,7 @@ st.set_page_config(
     page_title="企鹅分类器",
     page_icon=":penguin:",
     layout='wide',
-)
+) 
 
 #使用侧边栏实现多页面显示效果
 with st.sidebar:
@@ -36,11 +36,11 @@ elif page == "预测分类页面":
     with col_form:
         # 运用表单和表单提交按钮
         with st.form('user_inputs'):
-            island = st.selectbox('全数据信息的岛屿', options=['托尔森岛', '比斯科群岛'])
+            island = st.selectbox('企鹅栖息的岛屿', options=['托尔森岛', '比斯科群岛','德里姆岛'])
             sex = st.selectbox('性别', options=['雄性', '雌性'])
 
-            bill_length = st.number_input('喷射长度（毫米）', min_value=0.0)
-            bill_depth = st.number_input('喷射宽度（毫米）', min_value=0.0)
+            bill_length = st.number_input('喙的长度（毫米）', min_value=0.0)
+            bill_depth = st.number_input('喙的深度（毫米）', min_value=0.0)
             flipper_length = st.number_input('翅膀的长度（毫米）', min_value=0.0)
             body_mass = st.number_input('身体质量（克）', min_value=0.0)
             submitted = st.form_submit_button('预测分类')
